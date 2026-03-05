@@ -1,69 +1,156 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>formulario</title>
-    </head>
-    <body>
-        
-        <ul>
-            <li>
-                <a href="index.html">home</a>
-            </li>
-            <li>
-                <a href="img.html">imagem</a>
-            </li>
-            <li>
-                <a href="tabela.html">tabela</a>
-            </li>
-            <li>
-                <a href="listas.html">listas</a>
-            </li>
-        </ul>
-        <h2>conceitos sobre formulario no html</h2>
-        <p>esta pagina possui um resumo sobre os conceitos de formula do formulario</p>    
-        
-        <h2>formulario</h2>
-        <form>
-            <br>
+ <html lang="pt-br">
+ <head>
+    <meta charset="UTF-8">
 
-            <div>
-            <label for="nome">nome: </label> 
-            <input type="text">
-            </div>
+<head>
+    <title>FORMULÁRIO</title>
+</head>
+
+<body>
+    <ul>
+        <li>
+            <a href="index.html">HOME</a>
+        </li>
+        <li>
+            <a href="listas.html">LISTAS</a>
+        </li>
+        <li>
+            <a href="tabela.html">TABELA</a>
+        </li>
+        <li>
+            <a href="imagem.html">IMAGEM</a>
+        </li>
+    </ul>
+
+    <h2>Conceitos sobre Formulário no HTML</h2>
+    <p>Esta página possui um resumo sobre os conceitos de formulários do HTML!</p>
+
+    <h2>Formulário</h2>
+
+    <form>
+        <div>
+            <label for="nome">Nome: </label>
+            <input type="text" required>
+        </div>
+
+        <br>
+
+        <div>
+            <label for="idade">Idade</label>
+            <input type="number" required min="0" max="120">
+        </div>
+
+        <br>
+
+        <div>
+            <label for="usuario">Usuário: </label>
+            <input type="text" required>
+        </div>
+
+        <br>
+
+        <div>
+            <label for="senha">Senha: </label>
+            <input type="password" required>
+        </div>
+
+        <br>
+
+        <div>
+            <label for="dataEvento">Data do Evento: </label>
+            <input type="datetime-local" required>
+        </div>
+        <br>
+
+        <div> 
+            <label for="">
+                Telefone: 
+                <input type="tel" required placeholder="(XX) XXXXX-XXXX">
+            </label>
+        </div>
+
+        <br>
+
+        <div> 
+            <label for="email">
+              E-mail:   <input type= "email" requiered placeholder= "xxxxxx@xxxxx.xxxx"
+            </label>
+        </div>
+
+        <br>
+
+        <div>
+            <label for="Nota">
+                Nota: <input type= "nota" required min="0" max="100" step= "0.5" placeholder="Apenas numeros"
+        </div>
+
+        <br>
+        <br>
+
+        <label for="Volume">
+            Volume: <input type= "range" min="0" max="100" step="1.0">
+</label>
+
+        <br>
+         <br>
+
+        <div> 
+            <fieldset>
+                <legend>Estado Civil</legend>
+                <p>
+                    <label>
+                        <input type="radio" name="estado_civil" value="Casado"> Casado
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input type="radio" name="estado_civil" value="Solteiro"> Solteiro
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input type="radio" name="estado_civil" value="Divorciado"> Divorciado
+                    </label>
+                </p>
             
-            <br>
 
-            <div>
-            <label for="idade">idade</label>
-            <input type="number" min="0" max="120">
-            </div>
+            </fieldset>
+        </div>
 
-            <br>
+        <br>
 
-            <div>
-            <label for="usuario">usuario: </label>
-            <input type="text"> 
-            </div>
+        <div>
+            <fieldset>
+                <legend>produtos</legend>
+                <p>
+                    <label>
+                        <input type="checkbox" name="computador" value="computador"> computador
+                    </label>
+                </p>
+                   <p>
+                    <label>
+                        <input type="checkbox" name="computador" value="impressora"> impressora
+                    </label>
+                </p>
+                   <p>
+                    <label>
+                        <input type="checkbox" name="computador" value="monitor"> monitor
+                    </label>
+                </p>
+                 
+            </fieldset>
+        </div>
+        <br>
 
-            <br>
-
-            <div>
-            <label for="senha">senha: </label>
-            <input type="password"> 
-            </div>
-
-            <br>
-
-            <div>
-                <label for="dataEvento">data do evento: </label>
-                <input type="datetime-local">
-            </div>
-
-            <button type="submit">enviar </button>
-
-
-
-        </form>
-            
-    </body>
-    </html>
+        <div>
+            <label>
+                deixe sua sugestao:
+                <textarea cols="30" rows="5"></textarea>
+            </label>
+        </div>
+        <br>
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
