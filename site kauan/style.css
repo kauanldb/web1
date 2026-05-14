@@ -178,6 +178,19 @@ body {
   color: white;
 }
 
+.form-control::placeholder {
+  color: white;
+  opacity: 1;
+}
+
+.form-control:-ms-input-placeholder {
+  color: white;
+}
+
+.form-control::-ms-input-placeholder {
+  color: white;
+}
+
 .form-control:focus {
   background: #0f172a;
   color: white;
