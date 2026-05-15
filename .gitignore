@@ -1,0 +1,3 @@
+# Ignore local database files that should not be published
+/db/stock.db
+*.db

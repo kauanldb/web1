@@ -1,0 +1,32 @@
+{
+  "version": 2,
+  "dgSpecHash": "tEU0p9FS0R0=",
+  "success": true,
+  "projectFilePath": "/workspaces/web1/stokfacil/backend-csharp/StokFacil.csproj",
+  "expectedPackageFiles": [
+    "/home/codespace/.nuget/packages/microsoft.data.sqlite/8.0.0/microsoft.data.sqlite.8.0.0.nupkg.sha512",
+    "/home/codespace/.nuget/packages/microsoft.data.sqlite.core/8.0.0/microsoft.data.sqlite.core.8.0.0.nupkg.sha512",
+    "/home/codespace/.nuget/packages/sqlitepclraw.bundle_e_sqlite3/2.1.6/sqlitepclraw.bundle_e_sqlite3.2.1.6.nupkg.sha512",
+    "/home/codespace/.nuget/packages/sqlitepclraw.core/2.1.6/sqlitepclraw.core.2.1.6.nupkg.sha512",
+    "/home/codespace/.nuget/packages/sqlitepclraw.lib.e_sqlite3/2.1.6/sqlitepclraw.lib.e_sqlite3.2.1.6.nupkg.sha512",
+    "/home/codespace/.nuget/packages/sqlitepclraw.provider.e_sqlite3/2.1.6/sqlitepclraw.provider.e_sqlite3.2.1.6.nupkg.sha512",
+    "/home/codespace/.nuget/packages/system.memory/4.5.3/system.memory.4.5.3.nupkg.sha512",
+    "/home/codespace/.nuget/packages/microsoft.netcore.app.ref/8.0.22/microsoft.netcore.app.ref.8.0.22.nupkg.sha512",
+    "/home/codespace/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.22/microsoft.aspnetcore.app.ref.8.0.22.nupkg.sha512",
+    "/home/codespace/.nuget/packages/microsoft.netcore.app.host.linux-x64/8.0.22/microsoft.netcore.app.host.linux-x64.8.0.22.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1603",
+      "level": "Warning",
+      "message": "StokFacil depends on Microsoft.Data.Sqlite (>= 7.1.11) but Microsoft.Data.Sqlite 7.1.11 was not found. Microsoft.Data.Sqlite 8.0.0 was resolved instead.",
+      "projectPath": "/workspaces/web1/stokfacil/backend-csharp/StokFacil.csproj",
+      "warningLevel": 1,
+      "filePath": "/workspaces/web1/stokfacil/backend-csharp/StokFacil.csproj",
+      "libraryId": "Microsoft.Data.Sqlite",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
+}

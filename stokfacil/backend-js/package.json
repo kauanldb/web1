@@ -1,0 +1,15 @@
+{
+  "name": "stokfacil-backend-js",
+  "version": "1.0.0",
+  "description": "Backend JavaScript para o StokFácil usando SQLite local",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "list": "node index.js list",
+    "lowstock": "node index.js lowstock",
+    "summary": "node index.js summary"
+  },
+  "dependencies": {
+    "sqlite3": "^5.1.6"
+  }
+}
