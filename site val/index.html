@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ValMassoterapeuta | Agenda e Sessões</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="navbar container">
+        <h1 class="logo">ValMassoterapeuta</h1>
+        <ul class="nav-links">
+          <li><a href="#agenda">Agenda</a></li>
+          <li><a href="#servicos">Sessões</a></li>
+          <li><a href="#combos">Combos</a></li>
+          <li><a href="#pagamentos">Pagamentos</a></li>
+          <li><a href="#localizacao">Endereço</a></li>
+        </ul>
+      </nav>
+
+      <section class="hero-content container">
+        <div>
+          <p class="eyebrow">Bem-estar, cuidado e autoestima</p>
+          <h2>Agende sua sessão de massagem ou depilação online</h2>
+          <p>
+            Horários com duração de <strong>50 minutos</strong>, seleção de serviços, combos mensais de 1 a 10 sessões e controle
+            de valores em tempo real.
+          </p>
+          <a href="#agenda" class="btn">Marcar horário</a>
+        </div>
+      </section>
+    </header>
+
+    <main class="container layout-grid">
+      <section id="agenda" class="card">
+        <h3>Agenda Online</h3>
+        <p>Escolha data, horário e serviço. Cada atendimento dura 50 minutos.</p>
+
+        <form id="agendamentoForm" class="form-grid">
+          <label>
+            Nome
+            <input type="text" id="nome" required placeholder="Seu nome" />
+          </label>
+
+          <label>
+            Data
+            <input type="date" id="data" required />
+          </label>
+
+          <label>
+            Horário
+            <select id="horario" required>
+              <option value="">Selecione</option>
+            </select>
+          </label>
+
+          <label>
+            Serviço
+            <select id="servico" required>
+              <option value="Massagem Relaxante">Massagem Relaxante</option>
+              <option value="Massagem Modeladora">Massagem Modeladora</option>
+              <option value="Drenagem Linfática">Drenagem Linfática</option>
+              <option value="Depilação Completa">Depilação Completa</option>
+              <option value="Depilação Parcial">Depilação Parcial</option>
+            </select>
+          </label>
+
+          <button type="submit" class="btn">Confirmar agendamento</button>
+        </form>
+
+        <ul id="listaAgendamentos" class="list"></ul>
+      </section>
+
+      <section id="servicos" class="card">
+        <h3>Valores por Sessão</h3>
+        <p>Ajuste os valores das sessões conforme necessário.</p>
+        <div id="tabelaPrecos" class="price-list"></div>
+      </section>
+
+      <section id="combos" class="card">
+        <h3>Combos Mensais (1 a 10 sessões)</h3>
+        <p>Selecione o número de sessões no mês e veja o valor total com desconto progressivo.</p>
+
+        <div class="combo-controls">
+          <label>
+            Quantidade de sessões
+            <input type="range" id="qtdSessoes" min="1" max="10" value="1" />
+          </label>
+          <span id="qtdExibicao">1 sessão</span>
+        </div>
+
+        <label>
+          Escolha a sessão base para o combo
+          <select id="servicoCombo"></select>
+        </label>
+
+        <div class="combo-result">
+          <p><strong>Desconto:</strong> <span id="descontoAplicado">0%</span></p>
+          <p><strong>Total do combo:</strong> <span id="valorCombo">R$ 0,00</span></p>
+        </div>
+      </section>
+
+      <section id="pagamentos" class="card">
+        <h3>Aba de Pagamentos</h3>
+        <ul class="payment-list">
+          <li>PIX</li>
+          <li>Cartão de crédito/débito</li>
+          <li>Dinheiro</li>
+          <li>Transferência bancária</li>
+        </ul>
+        <p>Pagamento do combo pode ser parcelado em até 3x no cartão.</p>
+      </section>
+
+      <section id="localizacao" class="card full-width">
+        <h3>Endereço e Localização</h3>
+        <p><strong>Endereço:</strong> Rua Exemplo, 123 - Centro, Sua Cidade</p>
+        <p><strong>WhatsApp:</strong> (00) 90000-0000</p>
+        <p><strong>Horário de atendimento:</strong> Segunda a Sábado, 08h às 20h</p>
+        <iframe
+          title="Mapa"
+          src="https://www.google.com/maps?q=São%20Paulo&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </section>
+    </main>
+
+    <footer class="container footer">
+      <p>© <span id="ano"></span> ValMassoterapeuta — Agenda de Bem-estar.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
