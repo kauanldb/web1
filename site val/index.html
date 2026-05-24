@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header class="hero">
@@ -78,7 +78,7 @@
       <section id="servicos" class="card">
         <h3>Valores por Sessão</h3>
         <p>Ajuste os valores das sessões conforme necessário.</p>
-        <div id="tabelaPrecos" class="price-list"></div>
+        <ol id="tabelaPrecos" class="price-list"></ol>
       </section>
 
       <section id="combos" class="card">
@@ -86,11 +86,23 @@
         <p>Selecione o número de sessões no mês e veja o valor total com desconto progressivo.</p>
 
         <div class="combo-controls">
-          <label>
-            Quantidade de sessões
-            <input type="range" id="qtdSessoes" min="1" max="10" value="1" />
-          </label>
-          <span id="qtdExibicao">1 sessão</span>
+          <p style="font-weight: 600; margin-bottom: 0.5rem;">Quantas sessões?</p>
+          <div id="qtdSessoes" class="sessions-buttons"></div>
+        </div>
+
+        <div class="price-breakdown">
+          <div class="price-item">
+            <span class="label">Sessões</span>
+            <span id="qtdExibicao" class="value">1</span>
+          </div>
+          <div class="price-item">
+            <span class="label">Valor/Sessão</span>
+            <span id="valorUnitario" class="value">R$ 130,00</span>
+          </div>
+          <div class="price-item">
+            <span class="label">Desconto</span>
+            <span id="descontoAplicado" class="value discount">0%</span>
+          </div>
         </div>
 
         <label>
@@ -99,20 +111,49 @@
         </label>
 
         <div class="combo-result">
-          <p><strong>Desconto:</strong> <span id="descontoAplicado">0%</span></p>
-          <p><strong>Total do combo:</strong> <span id="valorCombo">R$ 0,00</span></p>
+          <p><strong>Total do combo:</strong> <span id="valorCombo">R$ 130,00</span></p>
         </div>
       </section>
 
       <section id="pagamentos" class="card">
-        <h3>Aba de Pagamentos</h3>
-        <ul class="payment-list">
-          <li>PIX</li>
-          <li>Cartão de crédito/débito</li>
-          <li>Dinheiro</li>
-          <li>Transferência bancária</li>
-        </ul>
-        <p>Pagamento do combo pode ser parcelado em até 3x no cartão.</p>
+        <h3>Formas de Pagamento</h3>
+        <p>Escolha a forma que melhor se adapta a você.</p>
+
+        <div class="payment-methods">
+          <div class="payment-card pix">
+            <div class="payment-icon">💰</div>
+            <h4>PIX</h4>
+            <p>Transferência instantânea</p>
+            <span class="payment-info">Sem juros</span>
+          </div>
+
+          <div class="payment-card credit">
+            <div class="payment-icon">💳</div>
+            <h4>Cartão de Crédito</h4>
+            <p>Visa, Mastercard, ELO</p>
+            <span class="payment-info">Até 10x sem juros</span>
+          </div>
+
+          <div class="payment-card money">
+            <div class="payment-icon">💵</div>
+            <h4>Dinheiro</h4>
+            <p>Pagamento presencial</p>
+            <span class="payment-info">À vista</span>
+          </div>
+
+          <div class="payment-card transfer">
+            <div class="payment-icon">🏦</div>
+            <h4>Transferência Bancária</h4>
+            <p>Direto na conta</p>
+            <span class="payment-info">Sem juros</span>
+          </div>
+        </div>
+
+        <div class="installments-section">
+          <h4>Parcelamento no Cartão</h4>
+          <p>Escolha em quantas vezes deseja parcelar:</p>
+          <div id="installmentOptions" class="installment-grid"></div>
+        </div>
       </section>
 
       <section id="localizacao" class="card full-width">
@@ -133,6 +174,5 @@
       <p>© <span id="ano"></span> ValMassoterapeuta — Agenda de Bem-estar.</p>
     </footer>
 
-    <script src="script.js"></script>
   </body>
 </html>
